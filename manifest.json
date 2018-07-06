@@ -29,8 +29,9 @@
   "content_scripts": [
     {
       "matches": [
-        "https://www.google.com/*",
-        "file:///C:/Users/mrqil/Desktop/testpage.html"
+        "https://*/*",
+        "http://*/*",
+        "file://*/*"
       ],
       "js": [
         "src/inject/inject.js","js/jquery.min.js","js/select2.full.js"
