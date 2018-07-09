@@ -34,7 +34,7 @@
         "file://*/*"
       ],
       "js": [
-        "src/inject/inject.js","js/jquery.min.js","js/select2.full.js"
+        "src/inject/inject.js","js/jquery.min.js","js/select2.full.min.js","src/components.js"
       ],
       "css":["css/select2.min.css"]
     }
