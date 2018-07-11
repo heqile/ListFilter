@@ -1,0 +1,1 @@
+{"domain":["https://www.abc.com", "https://www.oooo.com/*"]}
