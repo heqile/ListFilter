@@ -7,7 +7,7 @@ function select_dispatcher() {
 		// if event has never been dispatched
 		if(!event['target']) {
 			// dispatch 'change' event to 'select' element in order to trigger callback function
-			$("select")[0].dispatchEvent(event);
+			this.dispatchEvent(event);
 			// create a new event for next trigger
 			event = create_event();
 		}
