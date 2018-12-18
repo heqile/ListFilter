@@ -2,7 +2,7 @@
   "name": "ListFilter",
   "version": "0.0.2",
   "manifest_version": 2,
-  "description": "This extension can apply a filter to a list. To activate : Click Icon or use shortcut Ctrl + Click.",
+  "description": "This extension can apply a filter to a select list.",
   "icons": {
     "16": "icons/icon16.png",
     "19": "icons/icon19.png",

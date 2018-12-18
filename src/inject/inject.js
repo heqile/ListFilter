@@ -2,11 +2,7 @@ chrome.runtime.sendMessage({}, function(response) {
 	var readyStateCheckInterval = setInterval(function() {
 		if (document.readyState === "complete") {
 			clearInterval(readyStateCheckInterval);
-			$('select').on('click', function(event) {
-			    if (event.ctrlKey) {
-			        domain_control();
-			    }
-			} );
+			$(document).ready(select_dispatcher);
 		}
 	}, 10);
 });
@@ -17,7 +13,7 @@ function domain_control() {
 		list = result.list;
 		if (list && typeof(list) !== "object") {
 			store.remove("list");
-			alert("Oops, something is wrong with the data!");
+			console.log("Oops, something is wrong with the data!");
 			return;
 		}
 		else if (!list) {
