@@ -1,10 +1,10 @@
-chrome.runtime.sendMessage({}, function(response) {
-	var readyStateCheckInterval = setInterval(function() {
-		if (document.readyState === "complete") {
-			clearInterval(readyStateCheckInterval);
-			$(document).ready(select_dispatcher);
-		}
-	}, 10);
+chrome.extension.sendMessage({}, function(response) {
+    var readyStateCheckInterval = setInterval(function() {
+        if (document.readyState === "complete") {
+            clearInterval(readyStateCheckInterval);
+            domain_control();
+        }
+    }, 10);
 });
 
 function domain_control() {
