@@ -1,6 +1,6 @@
 
 function select_dispatcher() {
-	$("select").select2();
+	$("select").select2({width: 'resolve'});
 	// init event
 	var event = create_event();
 	$("select").on('change', function(){
