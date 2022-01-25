@@ -8,7 +8,6 @@ chrome.action.onClicked.addListener(function(tab) {
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     if (changeInfo.status === "complete") {
-        chrome.tabs.sendMessage(tabId, {handler: "listFilter"}, function(response) {
-        });
+        chrome.tabs.sendMessage(tabId, {handler: "listFilter"});
     }
 });
