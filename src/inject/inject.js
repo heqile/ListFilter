@@ -18,9 +18,8 @@ function select_dispatcher() {
 
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
-      if (request.handler === "listFilter")
-          $(document).ready(function() {
+        if (request.handler === "listFilter") {
             select_dispatcher();
-        });
+        }
     }
 );
