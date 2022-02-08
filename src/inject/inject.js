@@ -4,11 +4,12 @@ function new_event() {
 
 function select_dispatcher() {
     var event = new_event();
-    $("select").select2({width: '100%'});
-    $("select").on("select2:open", function(){
+    let selectElement = $("select").not("[multiple]")
+    selectElement.select2({width: '100%'});
+    selectElement.on("select2:open", function(){
         document.querySelector('.select2-search__field').focus();  // why not using jquery: https://github.com/select2/select2/issues/5993
     });
-    $("select").on('change', function(){
+    selectElement.on('change', function(){
         let not_dispatched = (event.target === null);
         if (not_dispatched) {
             // dispatch 'change' event to original element in order to trigger callback function
